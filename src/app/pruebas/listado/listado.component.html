@@ -1,0 +1,24 @@
+<p>listado de maricos</p>
+
+<div *ngIf=" borrado; else noBorrado  ">
+    <h3>marico borrado: <span>{{ borrado }} </span> </h3>
+    
+</div>
+
+<ng-template #noBorrado>
+    <h3> No ha borrado nada </h3>
+</ng-template>
+
+
+<button (click)="borrarJugador()">    
+    borrar
+</button>
+
+<ul>
+    <li *ngFor="let jugador of jugadores; let i = index">
+       {{ i + 1 }} - {{ jugador }}
+    </li>
+</ul>
+
+
+
